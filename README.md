@@ -1,6 +1,8 @@
 # Milo [![Build Status](https://secure.travis-ci.org/victorhazbun87/milo.png)](https://secure.travis-ci.org/victorhazbun87/milo)
 
-TODO: Write a gem description
+## Description 
+
+Track in real time the price and availability of every product carried by every location of every merchant through eBay Milo API.
 
 ## Installation
 
