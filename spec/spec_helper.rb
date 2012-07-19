@@ -1,2 +1,2 @@
+require 'rubygems'
 require 'milo'
-require 'supermodel'
