@@ -4,7 +4,7 @@ require File.expand_path('../lib/milo/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors                 = ["victorhazbun87"]
   gem.email                    = ["victorhazbun87@gmail.com"]
-  gem.description           = %q{Track in real time the price and availability of every product carried by every location of every merchant.}
+  gem.description           = %q{Track in real time the price and availability of every product carried by every location of every merchant through eBay Milo API.}
   gem.summary              = %q{Ruby wrapper for the eBay Milo API}
   gem.homepage            = ""
 
