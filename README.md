@@ -1,4 +1,4 @@
-# Milo
+# Milo [![Build Status](https://secure.travis-ci.org/victorhazbun87/milo.png)](https://secure.travis-ci.org/victorhazbun87/milo.png)
 
 TODO: Write a gem description
 
