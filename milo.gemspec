@@ -2,16 +2,20 @@
 require File.expand_path('../lib/milo/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["victorhazbun87"]
-  gem.email         = ["victorhazbun87@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.authors                 = ["victorhazbun87"]
+  gem.email                    = ["victorhazbun87@gmail.com"]
+  gem.description           = %q{TODO: Write a gem description}
+  gem.summary              = %q{TODO: Write a gem summary}
+  gem.homepage            = ""
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "milo"
-  gem.require_paths = ["lib"]
+  gem.files                     = `git ls-files`.split($\)
+  gem.executables         = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files              = gem.files.grep(%r{^(test|spec|features)/})
+  gem.name                   = "milo"
+  gem.require_paths       = ["lib"]
   gem.version       = Milo::VERSION
+
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "supermodel"
 end
