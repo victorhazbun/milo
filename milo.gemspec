@@ -2,8 +2,8 @@
 require File.expand_path('../lib/milo/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["victorhazbunanuff"]
-  gem.email         = ["victor.hazbun@koombea.com"]
+  gem.authors       = ["victorhazbun87"]
+  gem.email         = ["victorhazbun87@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
