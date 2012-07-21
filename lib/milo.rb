@@ -12,6 +12,7 @@ module Milo
   class CouldNotAuthenticateYou < StandardError; end
 end
 
+require 'milo/version'
 require 'milo/product'
 require 'milo/main'
 
