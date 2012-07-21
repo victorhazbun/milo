@@ -18,4 +18,8 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
+
+  s.add_runtime_dependency(%q<crack>, [">= 0.1.8"])
+  s.add_runtime_dependency(%q<activesupport>, [">= 2.3"])
+
 end
