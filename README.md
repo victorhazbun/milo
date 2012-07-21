@@ -1,4 +1,7 @@
-# Milo [![Build Status](https://secure.travis-ci.org/victorhazbun87/milo.png)](https://secure.travis-ci.org/victorhazbun87/milo)
+# Milo [![Build Status](https://secure.travis-ci.org/victorhazbun87/milo.png?branch=master)][travis] [![Dependency Status](https://gemnasium.com/victorhazbun87/milo.png?travis)][gemnasium]
+
+[travis]: http://travis-ci.org/victorhazbun87/milo
+[gemnasium]: https://gemnasium.com/milo/milo
 
 ## Description 
 
