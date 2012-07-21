@@ -3,7 +3,7 @@
 [travis]: http://travis-ci.org/victorhazbun87/milo
 [gemnasium]: https://gemnasium.com/milo/milo
 
-## Description 
+## Description
 
 Track in real time the price and availability of every product carried by every location of every merchant through eBay Milo API.
 
@@ -32,4 +32,3 @@ TODO: Write usage instructions here
 3. Add tests for it. This is important so I don’t break it in a future version unintentionally.
 4. Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull).
 5. Send me a pull request. Bonus points for topic branches.
-6. Dont be mad.
