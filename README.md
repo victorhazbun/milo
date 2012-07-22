@@ -24,27 +24,7 @@ Or install it yourself as:
 
 ## Getting Started
 
-First:
-
-    milo = Milo::Main.new("ec17621f92c4b199a7a041bfe27a0c00")
-
-Get all products:
-
-    milo.get_products
-
-Get product by id:
-
-    milo.get_product_by_id("20482374")
-
-Get product by upc code:
-
-    milo.get_product_by_upc("037000185062")
-
-More complex, find by id and pass show options for products:
-
-    milo.get_product_by_id("20482374", show: "PnamePminUpcImg45")
-
-Note: Read about show flag here -> https://www.x.com/developers/documentation-tools/milo/endpoints.html#products-endpoint
+See the [milo home page](http://victorhazbun87.github.com/milo) for the simple steps process.
 
 
 ## Contributing to Milo
