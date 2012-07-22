@@ -13,18 +13,6 @@ module Milo
       "https://api.x.com/milo/v3/"
     end
 
-    def params_list(list)
-      params = "?" + list.map do |k, v|
-        if v.is_a?(Array)
-          v.map do |val|
-            "#{k}[]=#{val}"
-          end.join("&")
-        else
-          "#{k}=#{v}"
-        end
-      end.join("&")
-    end
-
     def make_request(end_url)
       result_key = end_url.include?("?") ? "&key=#{@key}" : "?key=#{@key}"
       curl = Curl::Easy.new(main_url + end_url + result_key)
