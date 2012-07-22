@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email                    = ["victorhazbun87@gmail.com"]
   s.description           = %q{Track in real time the price and availability of every product carried by every location of every merchant through eBay Milo API.}
   s.summary              = %q{Ruby wrapper for the eBay Milo API}
-  s.homepage            = "https://github.com/victorhazbun87/milo"
+  s.homepage            = "http://victorhazbun87.github.com/milo/"
 
   s.files                      = `git ls-files`.split("\n")
   s.test_files               = `git ls-files -- {test,spec,features}/*`.split("\n")
