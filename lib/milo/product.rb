@@ -4,7 +4,7 @@ module Milo
     def get_products(options = {})
       base = "products"
       apply_flag(base, "?", options[:show])
-      make_request("products")
+      make_request(base)
     end
 
     def get_product_by_id(id, options = {})
