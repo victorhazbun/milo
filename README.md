@@ -22,7 +22,7 @@ Or install it yourself as:
 
     $ gem install milo
 
-## Usage
+## Getting Started
 
 First:
 
