@@ -11,6 +11,7 @@ describe Milo::Main, 'product api' do
       curl.stub!(:perform)
       curl.stub!(:header_str) { "\r\ntest: blah"}
       curl.stub!(:response_code).and_return(200)
+      curl.stub!(:body_str).and_return("{\"pagination\": {\"total_results\": 1, \"per_page\": 30, \"total_pages\": 1, \"page\": 0}, \"products\": [{\"merchants\": [4483], \"min_price\": null, \"name\": \"REDI2SET 43\\\" x 14\\\" Wavy Glass Pattern Frameless Replacement Glass Block Window\", \"max_price\": null, \"product_id\": 20482374}]}")
       curl
     end
   end
@@ -26,6 +27,7 @@ describe Milo::Main, 'product api' do
     milo = Milo::Main.new(@key)
     response = milo.get_product_by_id("20482374")
     response.url.should == "https://api.x.com/milo/v3/products?product_ids=20482374&key=#{@key}"
+    response.body.should =~ /Wavy Glass Pattern Frameless Replacement Glass Block Window/
     response.status.should == 200
   end
 

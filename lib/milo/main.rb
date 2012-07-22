@@ -1,12 +1,11 @@
 module Milo
   class Main
-    attr_accessor :main_url, :format
+    attr_accessor :main_url
     attr_reader :response_raw, :response
 
     def initialize(key, options = {})
       @key = key
       @options = options
-      @format = 'json'
     end
 
     def main_url
@@ -15,20 +14,14 @@ module Milo
 
     def make_request(end_url)
       result_key = end_url.include?("?") ? "&key=#{@key}" : "?key=#{@key}"
-      curl = Curl::Easy.new(main_url + end_url + result_key)
-
-      if curl.body_str == "<error>A friendly explanation of what went wrong</error>"
-        return "string" #raise CouldNotAuthenticateYou
-      end
-      Response.new(curl, format)
+      curl = Curl::Easy.perform(main_url + end_url + result_key)
+      Response.new(curl)
     end
 
     class Response
+      attr_reader :status, :body, :headers_raw, :headers, :curl, :url
 
-      attr_reader :status, :body, :headers_raw, :headers, :curl, :url, :data
-
-      def initialize(curl, format)
-        @format=format
+      def initialize(curl)
         @curl = curl
         @url = curl.url
         @status = curl.response_code
@@ -49,7 +42,6 @@ module Milo
         end
         @headers=hs
       end
-
     end
 
     include Milo::Product

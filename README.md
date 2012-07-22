@@ -6,6 +6,7 @@
 ## Description
 
 Track in real time the price and availability of every product carried by every location of every merchant through eBay Milo API.
+More info about eBay Milo API https://www.x.com/developers/documentation-tools/milo/endpoints.html
 
 ## Installation
 
@@ -23,7 +24,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First:
+
+    milo = Milo::Main.new("ec17621f92c4b199a7a041bfe27a0c00")
+
+Get all products:
+
+    milo.get_products
+
+Get product by id:
+
+    milo.get_product_by_id("20482374")
+
+Get product by upc code:
+
+    milo.get_product_by_upc("037000185062")
+
+More complex, find by id and pass show options for products:
+
+    milo.get_product_by_id("20482374", show: "PnamePminUpcImg45")
+
+Note: Read about show flag here -> https://www.x.com/developers/documentation-tools/milo/endpoints.html#products-endpoint
+
 
 ## Contributing to Milo
 

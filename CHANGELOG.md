@@ -1,3 +1,8 @@
+## v.0.06
+
+* get products
+* show flag option
+
 ## v.0.0.3
 
 * get products
