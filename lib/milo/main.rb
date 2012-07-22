@@ -10,17 +10,7 @@ module Milo
     end
 
     def main_url
-      url_prefix    = @options[:ssl] ? "https://" : "http://"
-      url_postfix   = "api.x.com/milo/v3/"
-      url_prefix + url_postfix
-    end
-
-    def self.to_json(function_name, input)
-      if input.is_a?(String)
-        input
-      else
-        input.to_json({:root => function_name})
-      end
+      "https://api.x.com/milo/v3/"
     end
 
     def params_list(list)
