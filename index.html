@@ -43,27 +43,54 @@ More info about eBay Milo API <a href="https://www.x.com/developers/documentatio
 <pre><code>milo = Milo::Main.new("ec17621f92c4b199a7a041bfe27a0c00")
 </code></pre>
 
-<p>Get all products:</p>
+<h3>Get all products:</h3>
 
 <pre><code>milo.get_products
 </code></pre>
 
-<p>Get product by id:</p>
+<p><strong>IS DEPRECATED IN VERSION 0.0.7</strong></p>
+
+<h2>Get product by id:</h2>
 
 <pre><code>milo.get_product_by_id("20482374")
 </code></pre>
 
-<p>Get product by upc code:</p>
+<h2>Get product by upc code:</h2>
 
 <pre><code>milo.get_product_by_upc("037000185062")
 </code></pre>
 
-<p>More complex, find by id and pass show options for products:</p>
+<h2>Find products by postal code:</h2>
+
+<pre><code>milo.get_product_by_postal_code("07032")
+</code></pre>
+
+<h2>More complex, find by id and pass show options for products:</h2>
 
 <pre><code>milo.get_product_by_id("20482374", show: "PnamePminUpcImg45")
 </code></pre>
 
-<p>Note: Read about show flag here -&gt; <a href="https://www.x.com/developers/documentation-tools/milo/endpoints.html#products-endpoint">https://www.x.com/developers/documentation-tools/milo/endpoints.html#products-endpoint</a></p>
+<p>Milo version 0.0.7 supports this kind of queries:</p>
+
+<pre><code>milo.get_product_by_postal_code("07032", {q: "basketball", show_defaults: "false", show: "PidPnameMidsPminPmaxDescPurlImg200Rate"})
+</code></pre>
+
+<h2>Search Query</h2>
+
+<p>The search query allows users to search for products by various text signals. A simple search query would include only words such as apple ipad.</p>
+
+<pre><code>q: "ipad"
+</code></pre>
+
+<h2>New Common Parameters <strong>(show_defaults)</strong>
+</h2>
+
+<p>It is another common parameter like <strong>show</strong> option</p>
+
+<pre><code>show_defaults: "false"
+</code></pre>
+
+<p>Api doc -&gt; <a href="https://www.x.com/developers/documentation-tools/milo/endpoints.html">https://www.x.com/developers/documentation-tools/milo/endpoints.html</a></p>
 
 <h2>Contributing to Milo</h2>
 
