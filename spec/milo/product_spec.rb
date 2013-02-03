@@ -35,7 +35,7 @@ describe Milo::Main, 'product api' do
 
   it "should be able to get by postal code with many flags", :vcr do
     milo = Milo::Main.new(@key)
-    p response = milo.get_product_by_postal_code("07032", {q: "basketball", show_defaults: "false",  show: "PidPnameMidsPminPmaxDescPurlImg200Rate"})
+    response = milo.get_product_by_postal_code("07032", {q: "basketball", show_defaults: "false",  show: "PidPnameMidsPminPmaxDescPurlImg200Rate"})
     response.to_json.should have_json_size(30).at_path("products")
     response.to_json.should include_json("Lifetime 44 in. Streamline Basketball System".to_json).at_path("products/0/name")
   end
