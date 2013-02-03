@@ -18,6 +18,9 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "fakeweb"
+  s.add_development_dependency "json_spec"
   s.add_dependency "curb"
   s.add_dependency "activesupport"
   s.add_dependency "crack"

@@ -13,9 +13,10 @@ module Milo
     end
 
     def make_request(end_url)
-      result_key = end_url.include?("?") ? "&key=#{@key}" : "?key=#{@key}"
+      result_key = "&key=#{@key}"
       curl = Curl::Easy.perform(main_url + end_url + result_key)
-      Response.new(curl)
+      response = Response.new(curl)
+      JSON.parse(response.body)
     end
 
     class Response
