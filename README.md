@@ -12,12 +12,12 @@ More info about eBay Milo API https://www.x.com/developers/documentation-tools/m
 
 Add this line to your application's Gemfile:
 
-    gem 'milo', git: "git@github.com:victorhazbun87/milo.git"
+    gem 'milo'
 
 And then execute:
 
     $ bundle
-
+    
 ## Getting Started
 
 See the [milo home page](http://victorhazbun87.github.com/milo) for the simple steps process.
